@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Proposal</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Will You Be My Valentine?</h1>
+    <form action="#" onsubmit="return validateResponse()">
+        <label for="response">Enter 'yes' or 'no':</label>
+        <input type="text" id="response" name="response" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateResponse() {
+            var response = document.getElementById("response").value.toLowerCase();
+
+            if (response === "no") {
+                alert("Oh no! Please reconsider and click 'yes'!");
+                return false; // Prevent form submission
+            } else if (response === "yes") {
+                alert("Yay! Get ready for some fun and laughter on Valentine's Day!");
+            } else {
+                alert("Oops, that wasn't a clear 'yes' or 'no.' Let's try again another time!");
+            }
+
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>
